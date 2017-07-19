@@ -144,7 +144,7 @@ export default function reducer (
       return immutable.set(state, `idExampleInModal`, null)
     }
     case SAVE_AND_CLOSE_ADD_MODAL: {
-      NotificationManager.success('Success message', 'Example Added');
+      NotificationManager.success('New Example Added', '');
       return immutable.set(state, `idExampleInModal`, null);
     }
     default:
