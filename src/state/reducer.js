@@ -3,6 +3,8 @@ import immutable from 'object-path-immutable'
 import testData from './testData.json'
 import isOnline from '../utils/isOnline'
 import pick from 'lodash/pick'
+import {NotificationManager} from 'react-notifications';
+import 'react-notifications/lib/notifications.css';
 
 import {
   EDIT,
@@ -142,7 +144,8 @@ export default function reducer (
       return immutable.set(state, `idExampleInModal`, null)
     }
     case SAVE_AND_CLOSE_ADD_MODAL: {
-      return immutable.set(state, `idExampleInModal`, null)
+      NotificationManager.success('Success message', 'Example Added');
+      return immutable.set(state, `idExampleInModal`, null);
     }
     default:
       return state

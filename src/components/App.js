@@ -7,6 +7,7 @@ import AddExampleModal from './AddExampleModal'
 import CompatibilityAlert from './CompatibilityAlert'
 import { connect } from 'react-redux'
 import { Spin } from 'antd'
+import { NotificationContainer } from 'react-notifications';
 
 const mapState = (state) => ({
   examples: state.examples
@@ -50,6 +51,7 @@ class App extends Component {
           intents={intents}
           entityNames={entityNames}
         />
+        <NotificationContainer/>
         <CompatibilityAlert />
       </div>
     )

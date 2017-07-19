@@ -91,7 +91,7 @@ class TopBar extends Component {
       )
 
     return (
-      <div style={{ height: 32, display: 'flex' }}>
+      <div style={{ height: 32, display: 'flex', margin: 10 }}>
         <h3 style={{ marginLeft: 8, marginTop: 5 }}>
           {filename}
         </h3>
@@ -101,7 +101,7 @@ class TopBar extends Component {
           type='primary'
           onClick={() => openAddModal()}
         >
-          Add new example
+          Add new example 
         </Button>
         {fileButtons}
         <ClearButton style={ styles.button }/>
